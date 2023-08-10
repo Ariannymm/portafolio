@@ -1,0 +1,118 @@
+:root {
+    --background-blanco: #F5F5F5;
+    --background-oscuro: #141628;
+    --background-boton: linear-gradient(45deg, rgba(251,99,118,1) 0%, rgba(252,177,166,1) 50%,  rgba(251,99,118,1) 100%);
+    --background-gradient: linear-gradient(0deg, rgba(252,177,166,1) 0%, rgba(255,224,215,1) 100%);
+    --background-claro: #ffe0d7;
+
+    --blanco: #FFFFFF;
+    --oscuro: #141628;
+    --claro: #fcb1a6;
+    --medio: #fb6376;
+    --fuerte: #c9184a;
+    --gris: #555555;
+    --negro: #000000;
+    --warning: #FF0E3E;
+
+    --titulo: 'Arima', cursive;    
+    --parrafo: 'Merriweather Sans', sans-serif;
+
+    --shadow-color: 234deg 53% 3%;
+    --shadow-elevation-low:
+        0px 1px 1.1px hsl(var(--shadow-color) / 0.34),
+        0px 1.7px 1.9px -1.2px hsl(var(--shadow-color) / 0.34),
+        0px 4px 4.5px -2.5px hsl(var(--shadow-color) / 0.34);
+    --shadow-elevation-medium:
+        0px 0.5px 0.6px hsl(var(--shadow-color) / 0.36),
+        0px 1.6px 1.8px -0.8px hsl(var(--shadow-color) / 0.36),
+        0px 3.9px 4.4px -1.7px hsl(var(--shadow-color) / 0.36),
+        0px 9.5px 10.7px -2.5px hsl(var(--shadow-color) / 0.36);
+    --shadow-elevation-high:
+        0px 0.5px 0.6px hsl(var(--shadow-color) / 0.34),
+        0px 2.8px 3.1px -0.4px hsl(var(--shadow-color) / 0.34),
+        0px 5.1px 5.7px -0.7px hsl(var(--shadow-color) / 0.34),
+        0px 8.5px 9.6px -1.1px hsl(var(--shadow-color) / 0.34),
+        0px 13.5px 15.2px -1.4px hsl(var(--shadow-color) / 0.34),
+        0px 21.1px 23.7px -1.8px hsl(var(--shadow-color) / 0.34),
+        -0.1px 32.1px 36.1px -2.1px hsl(var(--shadow-color) / 0.34),
+        -0.1px 47.3px 53.2px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 64px;
+}
+
+body {
+    background: var(--background-oscuro);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--parrafo);
+}
+
+.container {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.background_wave {
+    display: block;
+    width: 100vw;
+}
+
+.titulo {
+    color: var(--claro);
+    font-family: var(--titulo);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.6);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+
+.boton {
+    display: block;
+    width: 140px;
+    background-image: var(--background-boton);
+    color: var(--oscuro);
+    background-size: 150% auto;
+    font-family: var(--parrafo);
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-elevation-medium);
+    touch-action: manipulation;
+    user-select: none;
+    transition: .5s;
+    margin: 0 auto;
+
+}
+
+.boton:hover {
+    background-position: right center;
+    box-shadow: var(--shadow-elevation-low);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (min-width:375px) {
+    .titulo {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .titulo {
+        font-size: 3rem;
+    }
+}
